@@ -1,0 +1,319 @@
+/* page.module.css */
+
+/* Variáveis CSS para cores reutilizáveis */
+:root {
+  --primary-color: #9370DB; /* Roxo */
+  --secondary-color: #FF99CC; /* Rosa */
+  --light-secondary: #FF80B5; /* Rosa mais claro para hover */
+  --text-dark: #2E2E2E;
+  --text-gray: #666;
+  --bg-light: #f5f5f5;
+  --white: #fff;
+  --shadow-light: rgba(0, 0, 0, 0.05);
+  --shadow-medium: rgba(0, 0, 0, 0.1);
+}
+
+/* Estilos globais da página index */
+.index {
+  background-color: var(--bg-light);
+  color: var(--text-dark);
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Barra de navegação */
+.navbar {
+  background: var(--primary-color) !important;
+  padding: 1rem 2rem;
+  box-shadow: 0 2px 10px var(--shadow-medium);
+}
+
+.navbar-brand {
+  display: flex;
+  align-items: center;
+}
+
+.navbar-logo {
+  height: auto;
+  box-shadow: 2px 2px 5px var(--shadow-medium);
+  opacity: 0.8;
+}
+
+.navbar-brand span {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--white);
+  margin-left: 10px;
+}
+
+/* Seção Principal */
+.secao-principal {
+  background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+  color: var(--white);
+  padding: 5rem 0;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.secao-principal h1 {
+  font-size: 3.5rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.secao-principal p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+}
+
+/* Botão genérico */
+.btn {
+  background: var(--secondary-color);
+  color: var(--white);
+  font-weight: 600;
+  padding: 0.75rem 2rem;
+  border: none;
+  border-radius: 25px;
+  text-decoration: none;
+  display: inline-block;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn:hover {
+  background: var(--primary-color);
+  color: var(--white);
+  transform: translateY(-2px);
+}
+
+.rodape .btn {
+  color: var(--white) !important;
+}
+
+/* Seção Sobre */
+.secao-sobre {
+  padding: 4rem 0;
+  background-color: var(--white);
+  text-align: center;
+}
+
+.secao-sobre h2 {
+  color: var(--primary-color);
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.secao-sobre p {
+  font-size: 1.1rem;
+  color: var(--text-gray);
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* Seção Produtos */
+.secao-produtos {
+  padding: 4rem 0;
+  background-color: var(--bg-light);
+}
+
+.secao-produtos h2 {
+  text-align: center;
+  color: var(--primary-color);
+  font-size: 2.5rem;
+  margin-bottom: 3rem;
+}
+
+.cartao-produto {
+  background: var(--white);
+  border: 1px solid #ddd;
+  border-radius: 15px;
+  padding: 1.5rem;
+  text-align: center;
+  box-shadow: 0 5px 15px var(--shadow-light);
+  transition: transform 0.3s ease;
+}
+
+.cartao-produto:hover {
+  transform: translateY(-5px);
+}
+
+.cartao-produto img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.cartao-produto h3 {
+  font-size: 1.25rem;
+  margin: 10px 0;
+  color: var(--text-dark);
+}
+
+.cartao-produto p {
+  font-size: 1rem;
+  color: var(--text-gray);
+}
+
+.preco {
+  font-weight: bold;
+  color: var(--secondary-color);
+  margin-top: 10px;
+}
+
+/* Seção Depoimentos */
+.secao-depoimentos {
+  padding: 4rem 0;
+  background: var(--secondary-color);
+  color: var(--white);
+  text-align: center;
+}
+
+.cartao-depoimento {
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 15px;
+  padding: 2rem;
+  margin: 1rem;
+}
+
+/* Seção Chamada */
+.secao-chamada {
+  padding: 4rem 0;
+  background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+  text-align: center;
+  color: var(--white);
+}
+
+/* Rodapé */
+.rodape {
+  background: var(--primary-color);
+  color: var(--white);
+  padding: 2rem 0;
+  text-align: center;
+}
+
+.rodape a {
+  color: var(--secondary-color);
+  text-decoration: none;
+  margin: 0 10px;
+  transition: color 0.3s ease;
+}
+
+.rodape a:hover {
+  color: var(--light-secondary);
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .secao-principal h1 {
+    font-size: 2.5rem;
+  }
+
+  .secao-principal p {
+    font-size: 1rem;
+  }
+
+  .navbar {
+    padding: 1rem;
+  }
+
+  .navbar-brand span {
+    font-size: 1.25rem;
+  }
+
+  .secao-sobre,
+  .secao-produtos,
+  .secao-depoimentos,
+  .secao-chamada {
+    padding: 2rem 0;
+  }
+
+  .secao-sobre h2,
+  .secao-produtos h2 {
+    font-size: 2rem;
+  }
+
+  .cartao-produto,
+  .cartao-depoimento {
+    margin: 0.5rem;
+    padding: 1rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .cartao-produto,
+  .cartao-depoimento {
+    width: 100%; /* Garante que os cards ocupem a largura total em telas pequenas */
+  }
+}
+
+/* Seção Depoimentos - Atualizado */
+.cartao-depoimento {
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 15px;
+  padding: 2rem;
+  margin: 1rem;
+  min-height: 250px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: transform 0.3s ease;
+}
+
+.cartao-depoimento:hover {
+  transform: translateY(-5px);
+}
+
+.rating {
+  color: #FFD700;
+  font-size: 1.5rem;
+  margin: 10px 0;
+}
+
+.cartao-depoimento small {
+  color: rgba(255, 255, 255, 0.8);
+  display: block;
+  margin-top: 15px;
+}
+
+/* Seção de Produtos */
+.secao-produtos {
+  padding: 4rem 0;
+  background-color: var(--bg-light);
+}
+
+.cartao-produto {
+  background: var(--white);
+  border-radius: 15px;
+  padding: 1.5rem;
+  text-align: center;
+  box-shadow: 0 5px 15px var(--shadow-light);
+  transition: transform 0.3s ease;
+}
+
+.cartao-produto:hover {
+  transform: translateY(-5px);
+}
+
+.cartao-produto img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+}
+
+.cartao-produto h3 {
+  font-size: 1.25rem;
+  margin: 10px 0;
+  color: var(--text-dark);
+}
+
+.cartao-produto p {
+  font-size: 1rem;
+  color: var(--text-gray);
+}
+
+.preco {
+  font-weight: bold;
+  color: var(--secondary-color);
+  margin-top: 10px;
+}
+ 
